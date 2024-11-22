@@ -30,6 +30,7 @@ module fungible_tokens::managed {
     }
 
     /// Manager can mint new coins
+    /// https://docs.sui.io/standards/closed-loop-token/coin-token-comparison
     public entry fun mint(
         treasury_cap: &mut TreasuryCap<MANAGED>, amount: u64, recipient: address, ctx: &mut TxContext
     ) {
