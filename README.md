@@ -1,9 +1,14 @@
 # Mint token
 ```
-sui client call --function mint --args 0xe6cf26c79fb773d284ccfe2775127e57b024fd458b722714353ce63331f44e23 10 0xa907549d1221e935cd2f4cd1e910e49a16abdfe6f9a328c764c712df7257888b --module managed --package 0x3db856377a4f0f22c576255b8a3f2577d937dd24ce5eb8fbbfbb9eb141287fe6 --gas-budget 300000000
+sui client call --function mint --args 0x5857dbf356c823e173d20419e58acc6216c32c3c067e98a28deca1acdbec28fd 90000 0xa907549d1221e935cd2f4cd1e910e49a16abdfe6f9a328c764c712df7257888b --module managed --package 0xbba3af28b027ac19274dacf2fa6fb673181e68842f410b495e41e848d8bae1aa --gas-budget 300000000
 ```
 
 # Deploy/publish token
 ```
 sui client publish
+```
+
+# Refer quanIT
+```
+https://www.youtube.com/watch?v=TsFkES2FCZQ
 ```
