@@ -12,3 +12,8 @@ sui client publish
 ```
 https://www.youtube.com/watch?v=TsFkES2FCZQ
 ```
+
+# HomePage
+```
+https://docs.sui.io/guides/developer/coin
+```
