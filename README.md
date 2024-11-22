@@ -1,2 +1,1 @@
-# sui-token-locked-sell
-sui-token-locked-sell
+# SuiToken
