@@ -17,3 +17,6 @@ https://www.youtube.com/watch?v=TsFkES2FCZQ
 ```
 https://docs.sui.io/guides/developer/coin
 ```
+
+## Compare coin and token
+![image](https://github.com/user-attachments/assets/7ccb50c0-85bf-4c50-add7-90927ceffa1a)
