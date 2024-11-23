@@ -1,6 +1,6 @@
 module fungible_tokens::managed {
     use std::option;
-    use sui::coin::{ Self, Coin, TreasuryCap };
+    use sui::coin::{ Self, TreasuryCap };
     use sui::{ coin::{ DenyCapV2 }, deny_list::DenyList };
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};

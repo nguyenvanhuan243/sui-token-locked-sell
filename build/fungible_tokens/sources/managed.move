@@ -1,6 +1,6 @@
 module fungible_tokens::managed {
     use std::option;
-    use sui::coin::{ Self, Coin, TreasuryCap };
+    use sui::coin::{ Self, TreasuryCap };
     use sui::{ coin::{ DenyCapV2 }, deny_list::DenyList };
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
@@ -29,11 +29,6 @@ module fungible_tokens::managed {
         treasury_cap: &mut TreasuryCap<MANAGED>, amount: u64, recipient: address, ctx: &mut TxContext
     ) {
         coin::mint_and_transfer(treasury_cap, amount, recipient, ctx);
-    }
-
-    /// Manager can burn coins
-    public entry fun burn(treasury_cap: &mut TreasuryCap<MANAGED>, coin: Coin<MANAGED>) {
-        coin::burn(treasury_cap, coin);
     }
 
     /// Add an address to the deny list
