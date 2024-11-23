@@ -26,3 +26,10 @@ https://docs.welldonestudio.io/code/deploy-and-run/sui/#connect-to-welldone-code
 
 ## Access sui
 https://remix.ethereum.org/?#activate=wds-code-remix&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.26+commit.8a97fa7a.js
+
+## Can use remix
+![image](https://github.com/user-attachments/assets/9c0afab5-1b2b-4386-8168-713ac3bbc4d8)
+
+- convert to dev setting if you are using dev mode
+![image](https://github.com/user-attachments/assets/57b8d64e-a057-4ae2-8561-0522009dbf76)
+
