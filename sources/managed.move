@@ -15,20 +15,6 @@ module fungible_tokens::managed {
         transfer::public_transfer(treasury_cap, tx_context::sender(ctx))
     }
 
-    /// Sell tokens - only owner and specific address can execute
-    public entry fun sell_token(
-        treasury_cap: &mut TreasuryCap<MANAGED>, 
-        amount: u64, 
-        recipient: address, 
-        ctx: &mut TxContext
-    ) {
-        // Check if sender is either the owner or the authorized address
-        let sender = tx_context::sender(ctx);
-        assert!(sender == tx_context::sender(ctx) || sender == AUTHORIZED_ADDRESS, 1);
-        
-        coin::mint_and_transfer(treasury_cap, amount, recipient, ctx)
-    }
-
     /// Manager can mint new coins
     /// https://docs.sui.io/standards/closed-loop-token/coin-token-comparison
     public entry fun mint(
