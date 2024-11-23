@@ -1,16 +1,26 @@
 module fungible_tokens::managed {
     use std::option;
-    use sui::coin::{Self, Coin, TreasuryCap, DenyCapV2};
-    use sui::deny_list::DenyList;
+    use sui::coin::{ Self, Coin, TreasuryCap };
+    use sui::{ coin::{ DenyCapV2 }, deny_list::DenyList };
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
     struct MANAGED has drop {}
 
     fun init(witness: MANAGED, ctx: &mut TxContext) {
-        let (treasury_cap, metadata) = coin::create_currency<MANAGED>(witness, 2, b"MANAGED", b"MNG", b"", option::none(), ctx);
+         let (treasurycap, denycap, metadata) = coin::create_regulated_currency_v2(
+            witness,
+            6,
+            b"MANAGED",
+            b"",
+            b"",
+            option::none(),
+            false,
+            ctx,
+        );
         transfer::public_freeze_object(metadata);
-        transfer::public_transfer(treasury_cap, tx_context::sender(ctx));
+        transfer::public_transfer(treasurycap, tx_context::sender(ctx));
+        transfer::public_transfer(denycap, tx_context::sender(ctx));
     }
 
     /// Manager can mint new coins
@@ -54,10 +64,4 @@ module fungible_tokens::managed {
         coin::deny_list_v2_remove(denylist, denycap, denyaddy, ctx);
     }
 
-
-    #[test_only]
-    /// Wrapper of module initializer for testing
-    public fun test_init(ctx: &mut TxContext) {
-        init(MANAGED {}, ctx);
-    }
 }
