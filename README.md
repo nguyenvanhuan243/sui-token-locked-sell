@@ -23,3 +23,6 @@ https://docs.sui.io/guides/developer/coin
 
 ## Editor
 https://docs.welldonestudio.io/code/deploy-and-run/sui/#connect-to-welldone-code
+
+## Access sui
+https://remix.ethereum.org/?#activate=wds-code-remix&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.26+commit.8a97fa7a.js
