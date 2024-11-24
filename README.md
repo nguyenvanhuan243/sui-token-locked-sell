@@ -79,3 +79,6 @@ https://docs.sui.io/guides/developer/coin/regulated
 │  └──                                                 
 
 sui client call --function remove_addr_from_deny_list --module managed --package "DenyCapV2_PACK_ID" --args "0x403" "DenyCapV2_ObjectID" "DENY_ADDRESS" --gas-budget 300000000
+
+# Best editor
+- https://ide.bitslab.xyz/
