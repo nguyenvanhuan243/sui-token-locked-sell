@@ -58,3 +58,24 @@ sui client call --function remove_addr_from_deny_list --module managed --package
 sui client call --function mint --args 0xc1ed93ecf7fff639181b2f8da6be5ccd9817cd8829604473ddd53cdadc6b6da4 1234567000000 0xa907549d1221e935cd2f4cd1e910e49a16abdfe6f9a328c764c712df7257888b --module managed --package 0xe23dd5e38476eb1cfab3a871af81a2f5b26c5825bbf2a748f7bc540f3fb89b97 --gas-budget 300000000
 
 https://docs.sui.io/guides/developer/coin/regulated
+
+
+
+# Call remove address to deny list
+
+ ObjectID: <OBJECT-ID>
+   Sender: <SENDER-ADDR>
+   Owner: Account Address ( <PUBLISHER-ADDRESS )
+   ObjectType: 0x2::coin::DenyCap<<PACKAGE-ID>::regcoin::REGCOIN>
+   Version: <VERSION-NUMBER>
+   Digest: <DIGEST-HASH>
+┌──                                                                                                                                   │
+│  │ ObjectID: 0x250c7482662b13f6681ac1f049d555d4bc342e35e7f543a99b511c312779c707                                                        │
+│  │ Sender: 0xfc88562ea9e9790adb886aed3a47ebc8025c912ba913a2839c235df2b4909a21                                                          │
+│  │ Owner: Account Address ( 0xfc88562ea9e9790adb886aed3a47ebc8025c912ba913a2839c235df2b4909a21 )                                       │
+│  │ ObjectType: 0x2::coin::DenyCapV2<0x1a335cd4c08ac1d8dc3cf467b147f144dbd95cdcc1391bf11d51837806fea0e4::managed::MANAGED>              │
+│  │ Version: 226                                                                                                                        │
+│  │ Digest: 4ZzqxBKpaYUmUjobSXUqStJh9tN4ZjUZBvwuK6jGVA5d                                                                                │
+│  └──                                                 
+
+sui client call --function remove_addr_from_deny_list --module managed --package "DenyCapV2_PACK_ID" --args "0x403" "DenyCapV2_ObjectID" "DENY_ADDRESS" --gas-budget 300000000
