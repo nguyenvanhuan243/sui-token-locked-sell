@@ -48,3 +48,13 @@ https://remix.ethereum.org/?#activate=wds-code-remix&lang=en&optimize=false&runs
 # Movestudio
 - https://www.movestudio.dev/
 
+
+# To use these functions, you pass the DenyList object (0x403), your DenyCap object ID, and the address you want to either add or remove. Using the Sui CLI, you could use sui client call with the required information:
+
+sui client call --function remove_addr_from_deny_list --module managed --package 0xe23dd5e38476eb1cfab3a871af81a2f5b26c5825bbf2a748f7bc540f3fb89b97 --args 0x403 0x1661349e088108fe9a8c83031a08d7634203c06bbf634bc369440017908cbb09 0xa907549d1221e935cd2f4cd1e910e49a16abdfe6f9a328c764c712df7257888b --gas-budget 300000000
+
+sui client call --function remove_addr_from_deny_list --module managed --package 0xe23dd5e38476eb1cfab3a871af81a2f5b26c5825bbf2a748f7bc540f3fb89b97 --args 0x403 0x1661349e088108fe9a8c83031a08d7634203c06bbf634bc369440017908cbb09 0xa907549d1221e935cd2f4cd1e910e49a16abdfe6f9a328c764c712df7257888b --gas-budget 300000000
+
+sui client call --function mint --args 0xc1ed93ecf7fff639181b2f8da6be5ccd9817cd8829604473ddd53cdadc6b6da4 1234567000000 0xa907549d1221e935cd2f4cd1e910e49a16abdfe6f9a328c764c712df7257888b --module managed --package 0xe23dd5e38476eb1cfab3a871af81a2f5b26c5825bbf2a748f7bc540f3fb89b97 --gas-budget 300000000
+
+https://docs.sui.io/guides/developer/coin/regulated
