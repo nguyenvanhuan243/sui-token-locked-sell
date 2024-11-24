@@ -82,3 +82,12 @@ sui client call --function remove_addr_from_deny_list --module managed --package
 
 # Best editor
 - https://ide.bitslab.xyz/
+
+# Some commands
+```
+sui move build
+```
+
+```
+sui client publish
+```
