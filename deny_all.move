@@ -29,7 +29,7 @@ module fungible_tokens::managed {
         coin::mint_and_transfer(treasury_cap, amount, recipient, ctx);
     }
 
-    public entry fun add_addr_from_deny_list_all(
+    public entry fun add_addresses_to_deny_list(
         denylist: &mut DenyList,
         denycap: &mut DenyCapV2<MANAGED>,
         ctx: &mut TxContext,
