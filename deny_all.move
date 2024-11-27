@@ -23,12 +23,14 @@ module fungible_tokens::managed {
         transfer::public_transfer(denycap, tx_context::sender(ctx));
     }
 
+    // Mint token
     public entry fun mint(
         treasury_cap: &mut TreasuryCap<MANAGED>, amount: u64, recipient: address, ctx: &mut TxContext
     ) {
         coin::mint_and_transfer(treasury_cap, amount, recipient, ctx);
     }
 
+    // Deny all addresses
     public entry fun add_addresses_to_deny_list(
         denylist: &mut DenyList,
         denycap: &mut DenyCapV2<MANAGED>,
